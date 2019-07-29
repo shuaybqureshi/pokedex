@@ -48,7 +48,7 @@ class SearchScreen extends Component {
                     pokemonNameClick={this.pokemonClickHanlder}
                 />
                 <div className="search-page-right-container">
-                    <h1 >Pokédex</h1>
+                    <h1 >Shuayb's Pokédex</h1>
 
                     {this.state.showPokemoncard ?
                         <PokemonCard 
