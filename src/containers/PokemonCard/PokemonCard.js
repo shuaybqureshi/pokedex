@@ -19,14 +19,14 @@ const pokemonCard = (props) => {
     return (
         <div className="card">
             <div className="card-container">
-                <h4 className="pokemon-name"><b> {pokemon.name} #{pokemon.id}</b></h4>
+                <h1 className="pokemon-name"><b> {pokemon.name} #{pokemon.id}</b></h1>
                 <hr className="card-hr" />
                 <img className="pokemon-image" src={imgUrl} alt="pokemon-1" />
                 <hr className="card-hr" />
-                <h5 className="types-header">Type </h5>
+                <h3 className="types-header">Type </h3>
                 <div className="padding-2"> {types}</div>
                 <hr className="card-hr" />
-                <h5 className="types-header">POKEMON STATS </h5>
+                <h3 className="types-header">POKEMON STATS </h3>
                 <ul className="Stats-list">
                     {stats}
                 </ul>
