@@ -245,4 +245,9 @@ body{
         top:35px;
         right:20px;
     }
+    .pokemon-list{
+        overflow-x: hidden;
+        max-width: 100%;
+
+    }
    }
