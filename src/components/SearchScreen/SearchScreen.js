@@ -12,7 +12,8 @@ class SearchScreen extends Component {
     state = {
         pokemonList: [],
         selectedPokemon: [],
-        showPokemoncard: false
+        showPokemoncard: false,
+        showMobileNav:false
     }
     componentDidMount() {
         axios.get('https://pokeapi.co/api/v2/pokemon/?limit=100').then(response => {
@@ -33,9 +34,17 @@ class SearchScreen extends Component {
         this.setState({ pokemonList: newPokemonObj });
     }
     pokemonClickHanlder = (pokemon) => {
+        console.log("yeo")
         axios.get(pokemon.url).then(response => {
         this.setState({ selectedPokemon: response.data, showPokemoncard: true });
+        this.mobileToggleCloseHandler();
         });
+    }
+    mobileToggleHanlder =() =>{
+        this.setState({showMobileNav:true})
+    }
+    mobileToggleCloseHandler =() =>{
+        this.setState({showMobileNav:false})
     }
 
     render() {
@@ -46,6 +55,9 @@ class SearchScreen extends Component {
                     pokemonSearch={this.pokemonSearch}
                     pokemonList={this.state.pokemonList}
                     pokemonNameClick={this.pokemonClickHanlder}
+                    mobileToggleClick={this.mobileToggleHanlder}
+                    showMobileNav={this.state.showMobileNav}
+                    mobileToggleClose={this.mobileToggleCloseHandler}
                 />
                 <div className="search-page-right-container">
                     <h1 >Shuayb's Pokédex</h1>

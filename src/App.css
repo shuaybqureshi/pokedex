@@ -1,3 +1,9 @@
+.mobile-only, .mobile-nav{
+display: none;
+}
+.App-home{
+    margin:100px;
+}
 body{ 
     background-color: rgb(241, 245, 248);
     text-align: center;
@@ -49,6 +55,7 @@ body{
     .card hr{ 
         width: 100%;
         text-align: left;
+        margin: 15px 0px;
     }
     .type-box{
        
@@ -67,17 +74,17 @@ body{
     .padding-2{
         padding:2px;
     }
+   
     .side-bar{
-        width: 20rem;
-    }
-    .side-bar{
-        background-color: rgb(241, 245, 248);
+        background-color: rgb(209, 209, 209);
         padding: 30px 5px;
         margin-right: 0px;
         position: fixed;
         top: 0;
         left: 0;
         text-align: left;
+        width: 20rem;
+
     }
     .search-box-container{
         padding-left: 40px;
@@ -90,6 +97,7 @@ body{
     }
     .Stats-list li{
         text-align: left;
+        padding: 5px;
     }
     ul.Stats-list{
     columns: 2;
@@ -150,4 +158,91 @@ body{
         padding: 17px;
         text-align: center;
     }
-   
+   @media  only screen and (max-width:800px){
+
+    .side-bar{
+        font-size: 0.8rem;
+        width: 13rem;
+    }
+    .search-box-container input{
+        width: 6rem;
+        font-size: 0.7rem;
+    }
+    .search-page-right-container{
+        margin-left: 10rem;
+    }
+    .search-page-right-container h1 {
+        font-size:1.5rem;
+    }
+    .card{
+        width: 90%;
+    }
+    ul.Stats-list{
+        padding-left: 30px;
+        font-size: 0.9rem;
+    }
+
+
+   }
+   @media  only screen and (max-width:450px){
+       .mobile-only{
+           display: none;
+       }
+    .App-home{
+        margin:50px;
+    }
+    .homepage-title{
+        font-size: 1.5rem;
+    }
+    .search{
+        font-size:1rem;
+    }
+    .hide-mobile{
+        display: none;
+    }
+    .search-page-right-container{
+        margin: 0px;
+    }
+    .mobile-nav{
+        display: block;
+        height: 75px;
+        background-color: white;
+        top:0px;
+        position: fixed;
+        width: 100%;
+        }
+    .App-home{
+    margin: 0px;
+    padding-top: 36px;
+    margin-top:50px; 
+    }
+    .pokedex-image-mb{
+        height: 40px;
+        width: auto;
+        padding: 15px;
+    }
+    .svg-toggle-btn-mb{
+        width: 1rem;
+        height:1rem;
+        color: #b8c2cc;
+    }
+    .mobile-toggle-btn{
+        position: absolute;
+        top:35px;
+        left:20px;
+    }
+    .mobile-toggle-btn:hover{
+        cursor: pointer;
+    }
+    .svg-close-btn-mb{
+    height: 1rem;
+    width: 1rem;
+    color: #b8c2cc;
+
+    }
+    .close-toggle-btn{
+        position: absolute;
+        top:35px;
+        right:20px;
+    }
+   }

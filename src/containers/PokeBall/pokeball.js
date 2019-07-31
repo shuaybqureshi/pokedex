@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const pokeball = (props) => {
    return( <div>
-        <h1>Shuayb's Pokédex</h1>
+        <h1 className="homepage-title">Shuayb's Pokédex</h1>
         <NavLink to="/SearchScreen">
         <img src={logo} alt="logo" />
         </NavLink>

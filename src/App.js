@@ -7,10 +7,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-        <div className="App">
-          <Route path="/SearchScreen" component={SearchScreen} exact />
-          <Route path="/" component={Pokeball} exact />
-        </div>
+      <div className="App-home">
+        <Route path="/SearchScreen" component={SearchScreen} exact />
+        <Route path="/" component={Pokeball} exact />
+      </div>
     </BrowserRouter>
   );
 }
